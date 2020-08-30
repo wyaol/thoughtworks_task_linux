@@ -1,0 +1,16 @@
+mkdir cli-practice
+cd cli-practice
+touch readme.md
+echo 'Hi there, this is a readme file.' >> readme.md
+echo 'This is the second line of the readme' >> readme.md
+mv readme.md readme.txt
+mkdir document
+mv readme.txt document/introductions.txt
+cp document/introductions.txt document/readme.txt
+echo 'The quick brown fox jumps over a lazy dog' > document/readme.txt
+cp -r document docs/
+rm -rf document
+mkdir -p parent/child/docs
+cp docs/document/introductions.txt docs/
+cp docs/introductions.txt parent/child/docs/
+
